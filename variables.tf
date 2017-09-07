@@ -1,3 +1,9 @@
+variable "aws_access_key_id" {
+  default = "AKIAIJ47QW3XWJVMGIMA"
+}
+variable "aws_secret_access_key" {
+  default = "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"
+}
 variable "aws_region" {
   description = "The AWS region to create things in."
   default     = "us-east-1"

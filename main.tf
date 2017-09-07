@@ -15,7 +15,6 @@ resource "aws_elb" "web" {
   name = "terraform-example-elb"
 
   # The same availability zone as our instances
-  availability_zones = ["${aws_instance.web.*.availability_zone}"]
 
   listener {
     instance_port     = 80
@@ -23,7 +22,7 @@ resource "aws_elb" "web" {
     lb_port           = 80
     lb_protocol       = "http"
   }
-
+  subnets = ["subnet-6f8c5b0b"]
   # The instances are registered automatically
   instances = ["${aws_instance.web.*.id}"]
 }
