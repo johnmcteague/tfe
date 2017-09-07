@@ -29,7 +29,7 @@ resource "aws_elb" "web" {
 resource "aws_instance" "web" {
   instance_type = "t2.large"
   ami           = "${lookup(var.aws_amis, var.aws_region)}"
-
+  subnet_id     = "subnet-6f8c5b0b"
   # This will create 4 instances
   count = 4
 }
