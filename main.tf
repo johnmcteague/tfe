@@ -1,9 +1,9 @@
-terraform {
-  backend "atlas" {
-    name    = "j974670/dev"
-    address = "https://lab01.cf.mcteague.co.uk"
-  }
-}
+#terraform {
+#  backend "atlas" {
+#    name    = "jpmc-lab/dev"
+#    address = "https://atlas.hashicorp.com/beta/"
+#  }
+#}
 
 provider "aws" {
   region = "${var.aws_region}"
